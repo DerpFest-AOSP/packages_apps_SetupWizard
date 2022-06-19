@@ -19,8 +19,8 @@
     <string name="app_name">Setup Wizard</string>
     <string name="os_name" translatable="false">DerpFest</string>
 
-    <string name="lineage_wizard_script_uri" translatable="false">android.resource://org.lineageos.setupwizard/raw/lineage_wizard_script</string>
-    <string name="lineage_wizard_script_user_uri" translatable="false">android.resource://org.lineageos.setupwizard/raw/lineage_wizard_script_user</string>
+    <string name="lineage_wizard_script_uri" translatable="false">android.resource://org.derpfest.setupwizard/raw/lineage_wizard_script</string>
+    <string name="lineage_wizard_script_user_uri" translatable="false">android.resource://org.derpfest.setupwizard/raw/lineage_wizard_script_user</string>
 
     <string name="activity_label_empty" />
 
@@ -67,7 +67,7 @@
 
     <string name="setup_services">DerpFest features</string>
     <string name="services_pp_explanation">Services to extend the capabilities of your device.</string>
-    <string name="services_find_privacy_policy">You can read the privacy policy on another device by visiting <xliff:g id="uri" example="https://libremobileos.com/legal">%1$s</xliff:g></string>
+    <string name="services_find_privacy_policy">You can read the privacy policy on another device by visiting <xliff:g id="uri" example="https://derpfest.org/legal">%1$s</xliff:g></string>
     <string name="services_help_improve_cm">Help improve <xliff:g id="name" example="DerpFest">%s</xliff:g></string>
     <string name="services_metrics_label"><xliff:g id="name" example="Help improve DerpFest">%1$s</xliff:g> by automatically sending diagnostic and usage data to <xliff:g id="name" example="DerpFest">%2$s</xliff:g>. This information can’t be used to identify you and lends a hand to teams working on things like battery life, app performance, and new <xliff:g id="name" example="DerpFest">%3$s</xliff:g> features.</string>
     <string name="services_os_nav_keys_label"><b>Use on screen navigation keys</b> instead of hardware keys.</string>
