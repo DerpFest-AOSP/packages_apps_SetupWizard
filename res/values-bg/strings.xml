@@ -76,8 +76,8 @@
     <string name="intro_restore_subtitle" product="tablet">Ако имате резервно копие от последния си <xliff:g id="name" example="DerpFest">%s</xliff:g> таблет, тук може да го възстановите.</string>
     <string name="intro_restore_subtitle" product="default">Ако имате резервно копие от последния си <xliff:g id="name" example="DerpFest">%s</xliff:g> телефон, тук може да го възстановите.</string>
     <string name="intro_restore_button">Възстановяване от архив</string>
-    <string name="update_recovery_title">Актуализиране на Lineage Recovery</string>
-    <string name="update_recovery_description">Актуализира Lineage Recovery при първо зареждане след всяка актуализация.</string>
+    <string name="update_recovery_title">Актуализиране на DerpFest Recovery</string>
+    <string name="update_recovery_description">Актуализира DerpFest Recovery при първо зареждане след всяка актуализация.</string>
     <string name="update_recovery_warning">Recovery ще се актуализира веднага щом завършите настройката. Ако искате да го запазите непокътнат, деактивирайте тази функция.</string>
-    <string name="update_recovery_setting">Актуализирайте Lineage Recovery заедно с операционната система</string>
+    <string name="update_recovery_setting">Актуализирайте DerpFest Recovery заедно с операционната система</string>
 </resources>
