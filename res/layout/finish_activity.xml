@@ -42,6 +42,15 @@
             android:gravity="center"
             android:padding="@dimen/content_margin_left"/>
 
+        <TextView
+            style="@style/WelcomeTitle"
+            android:id="@+id/derp_motto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/derp_motto_message"
+            android:hyphenationFrequency="none"/>
+
         <org.derpfest.setupwizard.NavigationLayout
             android:id="@+id/navigation_bar"
             android:layout_width="match_parent"
