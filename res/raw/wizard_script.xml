@@ -122,6 +122,9 @@
         <result wizard:action="rom_settings" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;package=org.derpfest.setupwizard;action=org.derpfest.setupwizard.ROM_SETTINGS;end" id="rom_settings">
+        <result wizard:action="theme_settings" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;package=org.derpfest.setupwizard;action=org.derpfest.setupwizard.THEME_SETTINGS;end" id="theme_settings">
         <result wizard:action="navigation_settings" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;package=org.derpfest.setupwizard;action=org.derpfest.setupwizard.NAVIGATION_SETTINGS;end" id="navigation_settings">
