@@ -55,6 +55,7 @@ import android.util.Log;
 import org.derpfest.setupwizard.BiometricActivity;
 import org.derpfest.setupwizard.BluetoothSetupActivity;
 import org.derpfest.setupwizard.NetworkSetupActivity;
+import org.derpfest.setupwizard.ScreenLockActivity;
 import org.derpfest.setupwizard.SetupWizardApp;
 import org.derpfest.setupwizard.SimMissingActivity;
 import org.derpfest.setupwizard.wizardmanager.WizardManager;
@@ -285,6 +286,8 @@ public class SetupWizardUtils {
         }
         if (!hasBiometric(context)) {
             disableComponent(context, BiometricActivity.class);
+        } else {
+            disableComponent(context, ScreenLockActivity.class);
         }
         if (!hasTelephony(context) || !simMissing()) {
             disableComponent(context, SimMissingActivity.class);
