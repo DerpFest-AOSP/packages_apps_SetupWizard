@@ -17,8 +17,9 @@
 
 package org.derpfest.setupwizard.wizardmanager;
 
+import static com.google.android.setupcompat.util.WizardManagerHelper.ACTION_NEXT;
+
 import static org.derpfest.setupwizard.SetupWizardApp.ACTION_LOAD;
-import static org.derpfest.setupwizard.SetupWizardApp.ACTION_NEXT;
 import static org.derpfest.setupwizard.SetupWizardApp.EXTRA_ACTION_ID;
 import static org.derpfest.setupwizard.SetupWizardApp.EXTRA_RESULT_CODE;
 import static org.derpfest.setupwizard.SetupWizardApp.EXTRA_SCRIPT_URI;

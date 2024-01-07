@@ -20,15 +20,9 @@ package org.derpfest.setupwizard.backup;
 import static org.derpfest.setupwizard.SetupWizardApp.ACTION_RESTORE_FROM_BACKUP;
 import static org.derpfest.setupwizard.SetupWizardApp.REQUEST_CODE_RESTORE;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
-import com.google.android.setupcompat.util.WizardManagerHelper;
-import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
-
-import org.derpfest.setupwizard.NavigationLayout;
 import org.derpfest.setupwizard.R;
 import org.derpfest.setupwizard.SubBaseActivity;
 
@@ -49,20 +43,6 @@ public class RestoreIntroActivity extends SubBaseActivity {
     @Override
     protected void onNextPressed() {
         launchRestore();
-    }
-
-    @Override
-    protected void onSkipPressed() {
-        Intent intent = WizardManagerHelper.getNextIntent(getIntent(), Activity.RESULT_OK);
-        nextAction(NEXT_REQUEST, intent);
-    }
-
-    protected void onSubactivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_SKIP) {
-            onSkipPressed();
-        } else {
-            super.onSubactivityResult(requestCode, resultCode, data);
-        }
     }
 
     @Override
