@@ -20,8 +20,6 @@ package org.derpfest.setupwizard;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.google.android.setupcompat.util.ResultCodes;
-
 import org.derpfest.setupwizard.util.PhoneMonitor;
 
 public class SimMissingActivity extends BaseSetupWizardActivity {
