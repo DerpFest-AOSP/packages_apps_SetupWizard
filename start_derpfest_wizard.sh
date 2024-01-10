@@ -2,6 +2,10 @@
 
 adb root
 wait ${!}
+adb shell pm enable org.derpfest.setupwizard || true
+wait ${!}
+adb shell pm enable org.derpfest.setupwizard/.SetupWizardActivity || true
+wait ${!}
 if adb shell pm list packages | grep com.google.android.setupwizard; then
   adb shell pm disable com.google.android.setupwizard || true
   wait ${!}
@@ -10,4 +14,4 @@ if adb shell pm list packages | grep com.android.provision; then
   adb shell pm disable com.android.provision || true
   wait ${!}
 fi
-adb shell am start org.derpfest.setupwizard/org.derpfest.setupwizard.SetupWizardTestActivity
+adb shell am start -c android.intent.category.HOME org.derpfest.setupwizard/.SetupWizardActivity
