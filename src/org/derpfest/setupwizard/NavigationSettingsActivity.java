@@ -35,7 +35,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.airbnb.lottie.LottieAnimationView;
 
@@ -43,8 +42,6 @@ import org.derpfest.providers.DerpFestSettings;
 import org.derpfest.setupwizard.util.SetupWizardUtils;
 
 public class NavigationSettingsActivity extends BaseSetupWizardActivity {
-
-    public static final String TAG = NavigationSettingsActivity.class.getSimpleName();
 
     private SetupWizardApp mSetupWizardApp;
 
