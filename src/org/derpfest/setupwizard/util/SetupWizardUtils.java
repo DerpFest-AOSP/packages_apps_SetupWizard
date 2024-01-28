@@ -64,8 +64,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.android.internal.derpfest.hardware.LineageHardwareManager;
-import com.android.internal.util.derpfest.PackageManagerUtils;
+import org.derpfest.hardware.LineageHardwareManager;
+import org.derpfest.util.PackageManagerUtils;
 
 public class SetupWizardUtils {
 
