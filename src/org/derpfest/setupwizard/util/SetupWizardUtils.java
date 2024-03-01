@@ -58,7 +58,6 @@ import org.derpfest.setupwizard.ScreenLockActivity;
 import org.derpfest.setupwizard.SetupWizardApp;
 import org.derpfest.setupwizard.SetupWizardExitWorker;
 import org.derpfest.setupwizard.SimMissingActivity;
-import org.derpfest.setupwizard.wizardmanager.WizardManager;
 import org.derpfest.setupwizard.RomSettingsActivity;
 
 import java.io.File;
