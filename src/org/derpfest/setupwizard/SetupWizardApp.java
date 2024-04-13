@@ -52,7 +52,7 @@ public class SetupWizardApp extends Application {
     private boolean mIsRadioReady = false;
     private boolean mIgnoreSimLocale = false;
 
-    private final Bundle mSettingsBundle = new Bundle();
+    private static final Bundle mSettingsBundle = new Bundle();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private final Runnable mRadioTimeoutRunnable = () -> mIsRadioReady = true;
@@ -87,7 +87,7 @@ public class SetupWizardApp extends Application {
         mIgnoreSimLocale = ignoreSimLocale;
     }
 
-    public Bundle getSettingsBundle() {
+    public static Bundle getSettingsBundle() {
         return mSettingsBundle;
     }
 }
