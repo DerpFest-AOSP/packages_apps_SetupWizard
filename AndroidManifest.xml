@@ -281,6 +281,19 @@
         </activity>
 
         <activity
+            android:name=".VolumePanelActivity"
+            android:label="@string/activity_label_empty"
+            android:configChanges="mcc|mnc"
+            android:immersive="true"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="org.derpfest.setupwizard.VOLUME_PANEL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".FinishActivity"
             android:theme="@style/EdgeToEdgeWallpaperBackground"
             android:label="@string/activity_label_empty"

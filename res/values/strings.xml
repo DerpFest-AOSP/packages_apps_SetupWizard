@@ -82,4 +82,11 @@
     <string name="theme_summary">Dark theme uses a black background to help keep battery alive longer on some screens</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
+
+    <!-- Volume Panel -->
+    <string name="setup_volume_panel">Volume Panel</string>
+    <string name="volume_panel_summary">Select the volume panel side based on which side is easier to reach</string>
+    <string name="right_hand">Right side</string>
+    <string name="left_hand">Left side</string>
+
 </resources>
