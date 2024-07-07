@@ -47,6 +47,12 @@
     <WizardAction
         wizard:uri="intent:#Intent;action=org.derpfest.setupwizard.NAVIGATION_SETTINGS;end"
         id="navigation_settings">
+        <result wizard:action="volume_panel" />
+    </WizardAction>
+
+    <WizardAction
+        wizard:uri="intent:#Intent;action=org.derpfest.setupwizard.VOLUME_PANEL;end"
+        id="volume_panel">
         <result wizard:action="finish" />
     </WizardAction>
 

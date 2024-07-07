@@ -118,6 +118,9 @@
         <result wizard:action="navigation_settings" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;package=org.derpfest.setupwizard;action=org.derpfest.setupwizard.NAVIGATION_SETTINGS;end" id="navigation_settings">
+        <result wizard:action="volume_panel" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;package=org.derpfest.setupwizard;action=org.derpfest.setupwizard.VOLUME_PANEL;end" id="volume_panel">
         <result wizard:action="finish" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;package=org.derpfest.setupwizard;action=org.derpfest.setupwizard.LINEAGE_SETUP_COMPLETE;end" id="finish">
