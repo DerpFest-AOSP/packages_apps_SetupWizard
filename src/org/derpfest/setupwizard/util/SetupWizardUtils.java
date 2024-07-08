@@ -50,10 +50,8 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import org.derpfest.setupwizard.BaseSetupWizardActivity;
-import org.derpfest.setupwizard.BiometricActivity;
 import org.derpfest.setupwizard.BluetoothSetupActivity;
 import org.derpfest.setupwizard.NetworkSetupActivity;
-import org.derpfest.setupwizard.ScreenLockActivity;
 import org.derpfest.setupwizard.SetupWizardApp;
 import org.derpfest.setupwizard.SimMissingActivity;
 import org.derpfest.setupwizard.RomSettingsActivity;
@@ -245,11 +243,6 @@ public class SetupWizardUtils {
     public static void disableComponentsForMissingFeatures(Context context) {
         if (!hasLeanback(context) || isBluetoothDisabled()) {
             disableComponent(context, BluetoothSetupActivity.class);
-        }
-        if (!hasBiometric(context)) {
-            disableComponent(context, BiometricActivity.class);
-        } else {
-            disableComponent(context, ScreenLockActivity.class);
         }
         if (!hasTelephony(context)) {
             disableComponent(context, SimMissingActivity.class);
