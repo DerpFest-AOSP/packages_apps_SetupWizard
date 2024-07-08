@@ -71,18 +71,18 @@
     <WizardAction
         wizard:uri="intent:#Intent;action=org.derpfest.setupwizard.ROM_SETTINGS;end"
         id="rom_settings">
-        <result wizard:action="lockscreen_settings" />
-    </WizardAction>
-
-    <WizardAction
-        wizard:uri="intent:#Intent;action=org.derpfest.setupwizard.LINEAGE_LOCKSCREEN_SETTINGS;end"
-        id="lockscreen_settings">
         <result wizard:action="biometric_settings" />
     </WizardAction>
 
     <WizardAction
         wizard:uri="intent:#Intent;action=org.derpfest.setupwizard.LINEAGE_BIOMETRIC_SETTINGS;end"
         id="biometric_settings">
+        <result wizard:action="lockscreen_settings" />
+    </WizardAction>
+
+    <WizardAction
+        wizard:uri="intent:#Intent;action=org.derpfest.setupwizard.LINEAGE_LOCKSCREEN_SETTINGS;end"
+        id="lockscreen_settings">
         <result wizard:action="theme_settings" />
     </WizardAction>
 
