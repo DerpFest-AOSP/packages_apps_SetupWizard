@@ -9,6 +9,7 @@ import static com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NO
 
 import static org.derpfest.setupwizard.SetupWizardApp.EXTRA_ACTION_ID;
 import static org.derpfest.setupwizard.SetupWizardApp.EXTRA_SCRIPT_URI;
+import static org.derpfest.setupwizard.SetupWizardApp.EXTRA_WIZARD_BUNDLE;
 import static org.derpfest.setupwizard.SetupWizardApp.LOGV;
 
 import android.annotation.NonNull;
@@ -58,9 +59,9 @@ public abstract class SubBaseActivity extends BaseSetupWizardActivity {
 
     protected void startSubactivity(Intent subactivityIntent) {
         Intent intent = getIntent();
-        if (intent.hasExtra(EXTRA_SCRIPT_URI)) {
-            subactivityIntent.putExtra(EXTRA_SCRIPT_URI, intent.getStringExtra(EXTRA_SCRIPT_URI));
-            subactivityIntent.putExtra(EXTRA_ACTION_ID, intent.getStringExtra(EXTRA_ACTION_ID));
+        Bundle wizardBundle = intent.getBundleExtra(EXTRA_WIZARD_BUNDLE);
+        if (wizardBundle.containsKey(EXTRA_SCRIPT_URI)) {
+            subactivityIntent.putExtra(EXTRA_WIZARD_BUNDLE, wizardBundle);
         }
         try {
             startActivityForResult(subactivityIntent);
