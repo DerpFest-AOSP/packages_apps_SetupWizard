@@ -51,9 +51,7 @@ import android.util.Log;
 
 import org.derpfest.setupwizard.BaseSetupWizardActivity;
 import org.derpfest.setupwizard.BluetoothSetupActivity;
-import org.derpfest.setupwizard.NetworkSetupActivity;
 import org.derpfest.setupwizard.SetupWizardApp;
-import org.derpfest.setupwizard.SimMissingActivity;
 import org.derpfest.setupwizard.RomSettingsActivity;
 
 import java.io.File;
@@ -210,7 +208,7 @@ public class SetupWizardUtils {
         return SystemProperties.getBoolean("config.disable_bluetooth", false);
     }
 
-    private static boolean isNetworkConnectedToInternetViaEthernet(Context context) {
+    public static boolean isNetworkConnectedToInternetViaEthernet(Context context) {
         ConnectivityManager cm = context.getSystemService(ConnectivityManager.class);
         NetworkCapabilities networkCapabilities = cm.getNetworkCapabilities(cm.getActiveNetwork());
         return networkCapabilities != null &&
@@ -243,13 +241,6 @@ public class SetupWizardUtils {
     public static void disableComponentsForMissingFeatures(Context context) {
         if (!hasLeanback(context) || isBluetoothDisabled()) {
             disableComponent(context, BluetoothSetupActivity.class);
-        }
-        if (!hasTelephony(context)) {
-            disableComponent(context, SimMissingActivity.class);
-        }
-        if ((!hasWifi(context) && !hasTelephony(context)) ||
-                isNetworkConnectedToInternetViaEthernet(context)) {
-            disableComponent(context, NetworkSetupActivity.class);
         }
         if (!isKeyDisablerSupported(context)) {
             disableComponent(context, RomSettingsActivity.class);
