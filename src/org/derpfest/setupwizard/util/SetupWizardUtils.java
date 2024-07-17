@@ -50,7 +50,6 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import org.derpfest.setupwizard.BaseSetupWizardActivity;
-import org.derpfest.setupwizard.BluetoothSetupActivity;
 import org.derpfest.setupwizard.SetupWizardApp;
 import org.derpfest.setupwizard.RomSettingsActivity;
 
@@ -239,9 +238,6 @@ public class SetupWizardUtils {
     }
 
     public static void disableComponentsForMissingFeatures(Context context) {
-        if (!hasLeanback(context) || isBluetoothDisabled()) {
-            disableComponent(context, BluetoothSetupActivity.class);
-        }
         if (!isKeyDisablerSupported(context)) {
             disableComponent(context, RomSettingsActivity.class);
         }
