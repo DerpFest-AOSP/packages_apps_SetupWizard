@@ -37,7 +37,8 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:gravity="center"
-            android:padding="@dimen/content_margin_left"/>
+            android:padding="@dimen/content_margin_left"
+            android:tint="?android:attr/colorAccent" />
 
         <TextView
             style="@style/WelcomeTitle"
