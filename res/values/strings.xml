@@ -32,7 +32,7 @@
     <string name="sim_locale_changed">%1$s SIM detected</string>
 
     <!-- Missing SIM page -->
-    <string name="setup_sim_missing">SIM card missing</string>
+    <string name="setup_sim_missing">SIM card is missing</string>
     <string name="sim_missing_summary" product="tablet">A SIM card has not been detected in your tablet. To insert a SIM card, read the instructions that came with your device.</string>
     <string name="sim_missing_summary" product="default">A SIM card has not been detected in your phone. To insert a SIM card, read the instructions that came with your device.</string>
 
