@@ -44,7 +44,7 @@
 
     <!-- Restore backup page -->
     <string name="intro_restore_title">Restore apps and data</string>
-    <string name="intro_restore_subtitle">If you have a Seedvault backup from <xliff:g id="name" example="LMODroid">%s</xliff:g> or any other OS, you can restore it here.</string>
+    <string name="intro_restore_subtitle">If you have a Seedvault backup from <xliff:g id="name" example="DerpFest">%s</xliff:g> or any other OS, you can restore it here.</string>
     <string name="intro_restore_button">Restore from backup</string>
 
     <!-- Location page -->
