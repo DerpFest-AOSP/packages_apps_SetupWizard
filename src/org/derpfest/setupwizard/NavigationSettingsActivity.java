@@ -34,11 +34,7 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
 
     private SetupWizardApp mSetupWizardApp;
 
-    private boolean mIsTaskbarEnabled;
-
     private String mSelection = NAV_BAR_MODE_GESTURAL_OVERLAY;
-
-    private CheckBox mHideGesturalHint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +45,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         if (mSetupWizardApp.getSettingsBundle().containsKey(DISABLE_NAV_KEYS)) {
             navBarEnabled = mSetupWizardApp.getSettingsBundle().getBoolean(DISABLE_NAV_KEYS);
         }
-        mIsTaskbarEnabled = Settings.System.getInt(getContentResolver(),
-                DerpFestSettings.System.ENABLE_TASKBAR, isLargeScreen(this) ? 1 : 0) == 1;
 
         int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
@@ -88,12 +82,6 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         final LottieAnimationView navigationIllustration =
                 findViewById(R.id.navigation_illustration);
         final RadioGroup radioGroup = findViewById(R.id.navigation_radio_group);
-        mHideGesturalHint = findViewById(R.id.hide_navigation_hint);
-
-        // Hide navigation hint checkbox when taskbar is enabled
-        if (mIsTaskbarEnabled) {
-            mHideGesturalHint.setVisibility(View.GONE);
-        }
 
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
@@ -101,17 +89,14 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
                     mSelection = NAV_BAR_MODE_GESTURAL_OVERLAY;
                     navigationIllustration
                             .setAnimation(R.raw.lottie_system_nav_fully_gestural);
-                    revealHintCheckbox();
                     break;
                 case R.id.radio_two_button:
                     mSelection = NAV_BAR_MODE_2BUTTON_OVERLAY;
                     navigationIllustration.setAnimation(R.raw.lottie_system_nav_2_button);
-                    hideHintCheckBox();
                     break;
                 case R.id.radio_sw_keys:
                     mSelection = NAV_BAR_MODE_3BUTTON_OVERLAY;
                     navigationIllustration.setAnimation(R.raw.lottie_system_nav_3_button);
-                    hideHintCheckBox();
                     break;
             }
 
@@ -119,55 +104,9 @@ public class NavigationSettingsActivity extends BaseSetupWizardActivity {
         });
     }
 
-    private void revealHintCheckbox() {
-        if (mIsTaskbarEnabled) {
-            return;
-        }
-
-        mHideGesturalHint.animate().cancel();
-
-        if (mHideGesturalHint.getVisibility() == View.VISIBLE) {
-            return;
-        }
-
-        mHideGesturalHint.setVisibility(View.VISIBLE);
-        mHideGesturalHint.setAlpha(0.0f);
-        mHideGesturalHint.animate()
-                .translationY(0)
-                .alpha(1.0f)
-                .setListener(null);
-    }
-
-    private void hideHintCheckBox() {
-        if (mIsTaskbarEnabled) {
-            return;
-        }
-
-        if (mHideGesturalHint.getVisibility() == View.INVISIBLE) {
-            return;
-        }
-
-        mHideGesturalHint.animate()
-                .translationY(-mHideGesturalHint.getHeight())
-                .alpha(0.0f)
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        mHideGesturalHint.setVisibility(View.INVISIBLE);
-                    }
-                });
-    }
-
     @Override
     protected void onNextPressed() {
         mSetupWizardApp.getSettingsBundle().putString(NAVIGATION_OPTION_KEY, mSelection);
-        if (!mIsTaskbarEnabled) {
-            boolean hideHint = mHideGesturalHint.isChecked();
-            Settings.Secure.putIntForUser(getContentResolver(),
-                    Settings.Secure.NAVIGATION_BAR_HINT, hideHint ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-        }
         super.onNextPressed();
     }
 
